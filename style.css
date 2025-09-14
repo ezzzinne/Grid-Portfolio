@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    height: 100%;
+    max-width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 350px calc(100vh - 550px) 200px;
+    row-gap: 2px;
+    column-gap: 2px;
+    grid-template-areas: 
+        "intro intro intro intro"
+        "hobby hobby aspiration aspiration"
+        "hobby hobby aspiration aspiration";
+}
+
+.intro {
+    grid-area: intro;
+    background-color: #FFF3E0;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+}
+
+.hobby {
+    grid-area: hobby;
+    background-color: #FDE2E4;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+}
+
+.hobby-container {
+    justify-self: center;
+}
+
+.hobby h3, .aspiration h3 {
+    margin: 20px 0px;
+    text-decoration: underline;
+}
+
+.hobby p, li {
+    margin-bottom: 8px;
+}
+
+ul {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+.aspiration {
+    grid-area: aspiration;
+    background-color: #FFF8E7;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    
+}
+
+.aspiration-container {
+    justify-items: center;
+    text-align: left;
+}
+
+.aspiration-container p {
+    padding: 0 20px;
+}
+
+.grid-1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+img {
+    grid-column: 1 / span 2;
+    padding: 10px;
+    border-radius: 50%;
+    justify-self: center;
+    align-self: center;
+    background-color: #FFF3E0;
+    width: 300px;
+    height: 280px;
+}
+
+.intro p {
+    grid-column: 3 / 5;
+    padding: 10px;
+    justify-self: start;
+    align-self: center;
+}
+
+p, h3, li {
+    color: #212529;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "intro intro"
+        "hobby hobby"
+        "aspiration aspiration";
+        height: 100vh;
+    }
+
+    img {
+        width: 180px;
+        height: 180px;
+    }
+}
