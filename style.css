@@ -30,6 +30,7 @@
     background-color: #FDE2E4;
     border: 1px solid #dee2e6;
     border-radius: 12px;
+    justify-content: center;
 }
 
 .hobby-container {
@@ -56,7 +57,7 @@ ul {
     background-color: #FFF8E7;
     border: 1px solid #dee2e6;
     border-radius: 12px;
-    
+    justify-content: center;
 }
 
 .aspiration-container {
