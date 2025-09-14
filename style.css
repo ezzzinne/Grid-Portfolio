@@ -10,8 +10,8 @@
     max-width: 100%;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 350px calc(100vh - 550px) 200px;
-    row-gap: 2px;
-    column-gap: 2px;
+    row-gap: 4px;
+    column-gap: 4px;
     grid-template-areas: 
         "intro intro intro intro"
         "hobby hobby aspiration aspiration"
@@ -110,5 +110,9 @@ p, h3, li {
     img {
         width: 180px;
         height: 180px;
+    }
+
+    .hobby-container, .aspiration-container {
+        justify-items: center;
     }
 }
