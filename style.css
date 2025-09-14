@@ -111,6 +111,6 @@ p, h3, li {
     }
 
     .hobby-container, .aspiration-container {
-        justify-items: center;
+        justify-self: center;
     }
 }
